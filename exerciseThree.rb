@@ -1,6 +1,6 @@
 class ExerciseThree
 
-  require "./exerciseOne.rb"
+  require "./dna.rb"
 
   # @param [String] data
   def run(data)

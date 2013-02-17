@@ -1,4 +1,4 @@
-class ExerciseOne
+class DNA
 
   def run(data)
 
