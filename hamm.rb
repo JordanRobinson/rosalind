@@ -1,4 +1,4 @@
-class ExerciseFive
+class HAMM
 #Rosalind exercise: Counting Point Mutations
 
 # @param [String] data

@@ -1,6 +1,5 @@
-class ExerciseSix
+class SUBS
   #Rosalind exercise: Finding a Motif in DNA
-
 
   #@param [String] data
   def run(data)

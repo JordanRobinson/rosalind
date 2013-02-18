@@ -1,6 +1,6 @@
 class Rosalind
 
-  $exercise_name = "dna"
+  $exercise_name = "cons"
 
   require "./" + $exercise_name + ".rb"
 

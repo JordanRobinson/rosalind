@@ -1,4 +1,4 @@
-class ExerciseFour
+class G_C
 #Rosalind exercise: Computing GC Content
 
 

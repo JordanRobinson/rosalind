@@ -1,4 +1,4 @@
-class ExerciseTwo
+class RNA
 
   def run(data)
     puts data.gsub!("T", "U")
