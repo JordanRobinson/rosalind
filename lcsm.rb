@@ -13,7 +13,7 @@ class LCSM
 
     for i in 0..raw_array[0].length
       for j in 0..raw_array.length
-        puts raw_array[j][i]
+        #this isn't finished yet
       end
       puts "\n"
     end
