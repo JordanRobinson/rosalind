@@ -19,11 +19,14 @@ class LCSM
     end
 
     while longest_substrings.length > 1
+      puts longest_substrings.length
       master_container = longest_substrings
       longest_substrings = []
 
-      for j in 0..longest_substrings.length
+      for j in 0..master_container.length
         longest_substrings <<  get_common_substring(master_container[j], master_container[j + 1])
+        longest_substrings.delete_at(j)
+        longest_substrings.delete_at(j + 1)
       end
 
     end
