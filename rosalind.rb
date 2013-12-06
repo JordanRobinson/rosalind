@@ -1,6 +1,6 @@
 class Rosalind
 
-  $exercise_name = "cons"
+  $exercise_name = "lcsm"
 
   require "./" + $exercise_name + ".rb"
 
