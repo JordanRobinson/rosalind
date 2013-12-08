@@ -13,3 +13,4 @@ Currently finished:
  - HAMM - Counting Point Mutations
  - PROT - Protein Translation
  - SUBS - Finding a Motif in DNA
+ - LCSM - Finding a Shared Motif
