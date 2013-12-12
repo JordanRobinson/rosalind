@@ -10,7 +10,9 @@ class PRTM
 
 
   def run(data)
-
+    for i in 0..data.length
+      
+    end
   end
 
 
