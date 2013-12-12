@@ -8,12 +8,15 @@ class PRTM
                      "S" => 87.03203, "T" => 101.04768, "V" => 99.06841, "W" => 186.07931, "Y" => 163.06333}
 
 
-
+  # @param [String] data
   def run(data)
+    ret = 0.0
     for i in 0..data.length
-      
+      unless data[i].nil? or $protein_values[data[i]].nil?
+        ret = ret + $protein_values[data[i]]
+      end
     end
+    puts ret
   end
-
 
 end

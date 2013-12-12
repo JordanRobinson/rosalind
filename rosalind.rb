@@ -1,6 +1,6 @@
 class Rosalind
 
-  $exercise_name = "lcsm"
+  $exercise_name = "prtm"
 
   require "./" + $exercise_name + ".rb"
 
@@ -15,7 +15,6 @@ class Rosalind
   def run(exercise_name)
     #xerciseOne.new.run($data)
     eval($exercise_name.to_s.upcase).new.run($data)
-
   end
 end
 
