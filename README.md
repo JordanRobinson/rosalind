@@ -14,3 +14,4 @@ Currently finished:
  - PROT - Protein Translation
  - SUBS - Finding a Motif in DNA
  - LCSM - Finding a Shared Motif
+ - PRTM - Calculating Protein Mass
