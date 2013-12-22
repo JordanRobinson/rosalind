@@ -5,11 +5,7 @@ class PERM
 
     data_as_int = Integer(data)
 
-    numbers = []
-
-    for i in 1..data_as_int
-      numbers.push(i)
-    end
+    numbers = (1..data_as_int).to_a
 
     numbers = numbers.permutation.to_a
 
