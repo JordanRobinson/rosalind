@@ -1,6 +1,6 @@
 class Rosalind
 
-  $exercise_name = "perm"
+  $exercise_name = "lexf"
 
   require "./" + $exercise_name + ".rb"
 
