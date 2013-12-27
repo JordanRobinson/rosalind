@@ -16,7 +16,6 @@ class LEXF
     for i in 0..letters.length
       unless letters[i].nil?
         output << letters[i].join("")[0..3]
-        #output.add(letters[i].join(" ")[0] + letters[i].join(" ")[1])
       end
     end
 
