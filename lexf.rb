@@ -7,15 +7,25 @@ class LEXF
 
     letters = raw_array[0].split(/ /)
 
-    letters = letters + letters + letters
+    length = Integer(raw_array[1])
 
-    letters = letters.permutation.to_a
+    temp_letters = []
+
+    for i in 0..letters.length
+      for j in 0...length
+        temp_letters << letters[i]
+      end
+    end
+
+    letters = temp_letters
+
+    letters = letters.permutation(length).to_a
 
     output = []
 
     for i in 0..letters.length
-      unless letters[i].nil?
-        output << letters[i].join("")[0..3]
+      unless letters[i].nil? or letters[i].join("").length < length
+        output << letters[i].join("")[0...length]
       end
     end
 
