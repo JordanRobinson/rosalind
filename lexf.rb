@@ -7,8 +7,10 @@ class LEXF
 
     letters = raw_array[0].split(/ /)
 
-    length = Integer(raw_array[1])
+    length = Integer(raw_array[1]) #get the word length from the split text file
 
+    #iterate through and add a copy of each character so that they can be applied to each word x amount of times
+    #where x is the length earlier specified
     temp_letters = []
 
     for i in 0..letters.length
@@ -19,19 +21,20 @@ class LEXF
 
     letters = temp_letters
 
+    #get all possible permutations of length x of the array, that contains x copies of all the letters available
     letters = letters.permutation(length).to_a
 
     output = []
 
     for i in 0..letters.length
-      unless letters[i].nil? or letters[i].join("").length < length
+      unless letters[i].nil? or letters[i].join("").length < length #weed out words that are too small
         output << letters[i].join("")[0...length]
       end
     end
 
-    output = output.uniq
+    output = output.uniq #remove any duplicates since permutation doesn't
 
-    output.each do |i|
+    output.each do |i| #print everything out
       puts i
     end
 
