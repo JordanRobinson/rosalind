@@ -1,11 +1,6 @@
 class CONS
 #Rosalind exercise: Consensus and Profile
 
-  #not yet finished
-
-
-
-
 # @param [String] data
   def run(data)
 
@@ -15,7 +10,7 @@ class CONS
     processed_array = []
 
     for i in 0..raw_array[0].length
-      for j in 0..raw_array.length
+      for j in 0...raw_array.length
         puts raw_array[j][i]
       end
       puts "\n"
@@ -24,16 +19,13 @@ class CONS
 
 
 
-    for i in 0..raw_array.length
+    for i in 0...raw_array.length
       processed_string = ""
-
-      for j in 0..raw_array[i].length
+      for j in 0...raw_array[i].length
         processed_string = processed_string + raw_array[i][j]
       end
-
+      puts processed_string
     end
-
-
 
     #iterate through taking first char, then second, etc to build new string
     #build string each time into new array
