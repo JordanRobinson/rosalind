@@ -16,4 +16,6 @@ Currently finished:
  - LCSM - Finding a Shared Motif
  - PRTM - Calculating Protein Mass
  - PERM - Enumerating Gene Orders
- - 
+ - LEXF - Enumerating k-mers Lexicographically
+ - SSEQ - Finding a Spliced Motif
+ - SPLC - RNA Splicing
