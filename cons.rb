@@ -9,9 +9,9 @@ class CONS
 
     results_array = []
 
-    for i in 0...raw_array[1].length
+    (0...raw_array[1].length).each {
       results_array << ""
-    end
+    }
 
     for i in 0...raw_array.length
       for j in 0...raw_array[i].length
