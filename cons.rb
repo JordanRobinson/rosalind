@@ -27,6 +27,8 @@ class CONS
             results_array[j] += 'T'
           when nil
             #do nothing
+          when '\n'
+          when '\r'
           else
             puts raw_array[i][j]
         end
@@ -47,27 +49,36 @@ class CONS
       g_count = results_array[i].count('G')
       t_count = results_array[i].count('T')
 
-      if a_count > c_count and a_count > g_count and a_count > t_count #build up a pretty string for the heading
-        ret_string += "A"
-      elsif c_count > a_count and c_count > g_count and c_count > t_count
-        ret_string += "C"
-      elsif g_count > a_count and g_count > c_count and g_count > t_count
-        ret_string += "G"
-      elsif t_count > a_count and t_count > g_count and t_count > c_count
-        ret_string += "T"
-      end
+      unless a_count == 0 and c_count == 0 and g_count == 0 and t_count == 0
 
-    a_string_ret += a_count.to_s + " " #and then construct the matrix
-    c_string_ret += c_count.to_s + " "
-    g_string_ret += g_count.to_s + " "
-    t_string_ret += t_count.to_s + " "
+        counts = [a_count, c_count, g_count, t_count]
+
+        case counts.rindex(counts.max) #construct the big string
+          when 0
+            ret_string += "A"
+          when 1
+            ret_string += "C"
+          when 2
+            ret_string += "G"
+          when 3
+            ret_string += "T"
+          else
+            #do nothing
+        end
+
+        a_string_ret += a_count.to_s + " " #and then construct the matrix
+        c_string_ret += c_count.to_s + " "
+        g_string_ret += g_count.to_s + " "
+        t_string_ret += t_count.to_s + " "
+
+      end
     end
 
     puts ret_string
-    puts "A: " + a_string_ret #finally, print it out so it's as it should look
-    puts "C: " + c_string_ret
-    puts "G: " + g_string_ret
-    puts "T: " + t_string_ret
+    puts "A: " + a_string_ret.chop() #finally, print it out so it's as it should look
+    puts "C: " + c_string_ret.chop()
+    puts "G: " + g_string_ret.chop()
+    puts "T: " + t_string_ret.chop()
   end
 
 end
