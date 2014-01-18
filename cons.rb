@@ -25,12 +25,8 @@ class CONS
             results_array[j] += 'C'
           when 'T'
             results_array[j] += 'T'
-          when nil
-            #do nothing
-          when '\n'
-          when '\r'
           else
-            puts raw_array[i][j]
+            #do nothing
         end
       end
     end
