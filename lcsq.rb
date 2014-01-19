@@ -1,6 +1,9 @@
 class LCSQ
 #Rosalind exercise: Finding a Shared Spliced Motif
 
+  #this is much, much, muuuuch too slow.
+
+
   def run(data)
 
     data.gsub!(/\s+/, "") #remove all whitespace
