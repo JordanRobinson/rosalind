@@ -1,7 +1,8 @@
 class Rosalind
 
-  $exercise_name = "lexf"
+  $exercise_name = "lcsq"
 
+  require 'time'
   require "./" + $exercise_name + ".rb"
 
   $data
@@ -14,7 +15,10 @@ class Rosalind
 
   def run(exercise_name)
     #xerciseOne.new.run($data)
-    eval($exercise_name.to_s.upcase).new.run($data)
+  start = Time.now
+  eval($exercise_name.to_s.upcase).new.run($data)
+  elapsed = (Time.now - start)
+  print "\nExercise " + $exercise_name + " completed in " + elapsed.to_s + " seconds"
   end
 end
 
