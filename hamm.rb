@@ -12,7 +12,7 @@ class HAMM
     i = 0
 
     first_set.each { |x|
-      if not x.eql?(second_set[i])
+      unless x.eql?(second_set[i])
 
         puts x + " " + second_set[i]
 
