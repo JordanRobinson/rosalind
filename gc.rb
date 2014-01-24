@@ -25,7 +25,7 @@ class G_C
     total_count = data.length
 
 
-    ret = (g_count + c_count).to_f / total_count * 100
+    (g_count + c_count).to_f / total_count * 100
 
   end
 end

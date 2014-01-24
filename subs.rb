@@ -39,7 +39,7 @@ class SUBS
 
     for i in 0..capture_length
       check_position = i + position
-      if not target_data[check_position].eql?(capture_group_array[i])
+      unless target_data[check_position].eql?(capture_group_array[i])
         ret = false
       end
     end

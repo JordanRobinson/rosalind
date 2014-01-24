@@ -1,6 +1,7 @@
 class LCSM
 #Rosalind exercise: Finding a Shared Motif
 
+  # @param [String] data
   def run(data)
 
     #strip headings
