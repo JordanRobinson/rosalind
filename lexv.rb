@@ -16,6 +16,7 @@ class LEXV
 
     for i in 0..letters.length
       for j in 0...length
+        temp_letters << ' '
         temp_letters << letters[i]
       end
       temp_letters
@@ -30,7 +31,7 @@ class LEXV
 
     for i in 0..letters.length
       unless letters[i].nil? #or letters[i].join("").length < length #weed out words that are too small
-        output << letters[i].join("")[0...length]
+        output << letters[i].join('')[0...length]#.gsub!(' ','')
       end
     end
 
