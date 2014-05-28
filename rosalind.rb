@@ -1,6 +1,6 @@
 class Rosalind
 
-  $exercise_name = 'lexv'
+  $exercise_name = 'tran'
 
   require 'time'
   require './' + $exercise_name + '.rb'
@@ -19,7 +19,7 @@ class Rosalind
     print Dir.pwd
     eval($exercise_name.to_s.upcase).new.run($data)
     elapsed = (Time.now - start)
-    print '\nExercise ' + $exercise_name + ' completed in ' + elapsed.to_s + ' seconds'
+    print  "\n" + 'Exercise ' + $exercise_name + ' completed in ' + elapsed.to_s + ' seconds'
   end
 end
 

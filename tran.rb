@@ -5,14 +5,12 @@ class TRAN
 
     #puts data
 
-    data.gsub!(/\s+/, "") #remove all whitespace
-    data.gsub!(/[0-9]./, "")
+    data.gsub!(/\s+/, '') #remove all whitespace
+    data.gsub!(/[0-9]./, '')
     data_array = data.split(/>Rosalind_/)
 
-    #puts data_array
-
-    first_set = data_array[0]
-    second_set = data_array[1]
+    first_set = data_array[1]
+    second_set = data_array[2]
 
     puts first_set
     puts second_set
@@ -22,26 +20,36 @@ class TRAN
 
     i = 0
 
-    first_set.each { |x|
-      unless x.equal?(second_set[i])
+    first_set.split(//).each { |x|
+
+      puts x + ' ' + second_set.split(//)[i]
+
+      unless x.equal?(second_set.split(//)[i])
         if transition?(x, second_set[i])
-          transition = transition + 1
+          transition = transition + 1.0
+          puts 'transi' + transition.to_s
+        else
+          transversion = transversion + 1.0
+          puts 'transv' + transversion.to_s
         end
-      else
-        transversion = transversion + 1
+
       end
       i = i + 1
     }
-    puts transition / transversion
+    puts transition.to_s
+    puts transversion.to_s
+    puts (transition / transversion).to_s
   end
 
   def transition?(first_char, second_char)
-    if (first_char.equal?('A') && second_char.equal?('G')) || (first_char.equal?('G') && second_char.equal?('A'))
-      true
+    if (first_char == 'A' && second_char == 'G') || (first_char == 'G' && second_char == 'A')
+      puts 'found true'
+      return true
     end
 
-    if (first_char.equal?('C') && second_char.equal?('T')) || (first_char.equal?('T') && second_char.equal?('C'))
-      true
+    if (first_char == 'C' && second_char == 'T') || (first_char == 'T' && second_char == 'C')
+      puts 'found true'
+      return true
     end
 
     false
