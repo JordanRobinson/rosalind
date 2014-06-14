@@ -18,18 +18,18 @@ class KMER
     }
 
     i = 0
+    kmers = []
+
+    for i in 0..data_array[1].length
+      unless (i + 3) > data_array[1].length or data_array[1][i+3].nil?
+        current_kmer = data_array[1][i] + data_array[1][i+1] + data_array[1][i+2] + data_array[1][i+3]
+        kmers << current_kmer
+        puts current_kmer
+      end
+    end
+
     kmer_alphabet.uniq.each { |x|
-      puts x
-
-
-
-
-
-
-      puts data_array[1].split(//)
-
-
-      i = i + 1
+      print kmers.count(x).to_s + ' '
     }
 
   end
