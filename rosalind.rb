@@ -1,6 +1,6 @@
 class Rosalind
 
-  $exercise_name = 'kmer'
+  $exercise_name = 'iprb'
 
   require 'time'
   require './' + $exercise_name + '.rb'
