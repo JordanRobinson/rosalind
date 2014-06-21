@@ -52,8 +52,7 @@ class REVC
       end
       data_size = data_size - 1
     end
-    puts out #and we didn't even take it to a show
-
+    out
   end
 
 end
