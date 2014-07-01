@@ -3,7 +3,9 @@ require './src/rosalind'
 
 class TestRosalind < Test::Unit::TestCase
 
-  def testEverything
+  def test_everything
+
+    debug = false
 
     #for debug purposes, uncomment
     #print Dir.entries(Dir.pwd)
@@ -35,24 +37,19 @@ class TestRosalind < Test::Unit::TestCase
 
       exercise_name = sample_files[i].gsub!('-sample.txt', '')
       test_result = runner.run_with_data(exercise_name, sample)
+      if debug
+        puts '---------------------exercise = ' + exercise_name + '----------------'
+        puts '---------------------sample-------------------------'
+        puts sample
+        puts '---------------------expected-----------------------'
+        puts result
+        puts '---------------------given--------------------------'
+        puts test_result
+        puts
+      end
 
-      puts 'Exercise = ' + exercise_name + ''
 
-      puts 'sample'
-      puts '----------------------------------------------'
-      puts sample
-      puts '----------------------------------------------'
-      puts 'expected'
-      puts '----------------------------------------------'
-      puts result
-      puts '----------------------------------------------'
-      puts 'given'
-      puts '----------------------------------------------'
-      puts test_result
-      puts '----------------------------------------------'
-      puts
-
-    assert_equal(result, test_result)
+      assert_equal(result, test_result, 'failure on running ' + exercise_name)
     end
 
   end

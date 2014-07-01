@@ -26,7 +26,7 @@ class TRAN
       end
       i = i + 1
     }
-    puts "\n" + (transition / transversion).to_s
+    "\n" + (transition / transversion).to_s
   end
 
   def transition?(first_char, second_char)
