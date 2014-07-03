@@ -1,3 +1,4 @@
+# encoding: UTF-8
 require 'test/unit'
 require './src/rosalind'
 
@@ -48,15 +49,11 @@ class TestRosalind < Test::Unit::TestCase
         puts
       end
 
-
-      assert_equal(result, test_result, 'failure on running ' + exercise_name)
+      if assert_equal(result, test_result, 'failure on running ' + exercise_name)
+        puts exercise_name + ('✔'.encode('utf-8')).rjust(15 - exercise_name.length)
+      end
     end
 
   end
-
-
-
-
-
 
 end

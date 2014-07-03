@@ -4,7 +4,7 @@ class FIB
   def run(data)
 
     raw_array = data.split(" ")
-    puts recurse(Integer(raw_array[0]), Integer(raw_array[1]))
+    recurse(Integer(raw_array[0]), Integer(raw_array[1])).to_s
   end
 
   def recurse(x, y)
