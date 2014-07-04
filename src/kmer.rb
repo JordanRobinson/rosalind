@@ -27,12 +27,12 @@ class KMER
       end
     end
 
-    puts "\n" #set up printing so we're on a newline
-
     #then simply count the kmers against our alphabet
+    ret = ''
     kmer_alphabet.uniq.each { |x|
-      print kmers.count(x).to_s + ' ' #and output the counts
+      ret += kmers.count(x).to_s + ' ' #and output the counts
     }
+    ret.strip!
 
   end
 end
