@@ -14,14 +14,14 @@ class HAMM
     first_set.each { |x|
       unless x.eql?(second_set[i])
 
-        puts x + " " + second_set[i]
+        #puts x + " " + second_set[i]
 
         hamming_distance = hamming_distance + 1
 
       end
       i = i+1
     }
-    puts hamming_distance
+    hamming_distance.to_s
 
   end
 end
