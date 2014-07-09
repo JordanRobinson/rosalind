@@ -20,8 +20,7 @@ class SUBS
       end
     }
 
-
-    puts ret.chop
+    ret.chop
 
   end
 
