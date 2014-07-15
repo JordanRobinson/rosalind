@@ -30,6 +30,7 @@ class TestRosalind < Test::Unit::TestCase
     assert_equal(sample_files.size, result_files.size)
 
     runner = Rosalind.new
+    results = Hash.new
 
     for i in 0...sample_files.length
       sample = IO.read(sample_files[i])
@@ -49,8 +50,21 @@ class TestRosalind < Test::Unit::TestCase
         puts
       end
 
-      if assert_equal(result, test_result, 'failure on running ' + exercise_name)
-        puts exercise_name + ('✔'.encode('utf-8')).rjust(15 - exercise_name.length)
+      results[exercise_name] = result == test_result
+
+    end
+
+    results.each do |name, result|
+      if result
+        puts name + ('✔'.encode('utf-8')).rjust(15 - name.length)
+      else
+        puts name + ('✘'.encode('utf-8')).rjust(15 - name.length)
+      end
+    end
+
+    results.each do |name, result|
+      unless result
+        assert(result, 'failure on running ' + name)
       end
     end
 
