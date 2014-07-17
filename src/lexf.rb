@@ -13,6 +13,8 @@ class LEXF
     #where x is the length earlier specified
     temp_letters = []
 
+    ret = ''
+
     for i in 0..letters.length
       for j in 0...length
         temp_letters << letters[i]
@@ -35,9 +37,9 @@ class LEXF
     output = output.uniq #remove any duplicates since permutation doesn't
 
     output.each do |i| #print everything out
-      puts i
+      ret = ret + i + "\n"
     end
-
+    ret.chop!
   end
 
 end
