@@ -1,6 +1,6 @@
 class REVC
 
-  require './dna.rb'
+  require '../src/dna.rb'
 
   # @param [String] data
   def run(data)
