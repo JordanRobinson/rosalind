@@ -21,13 +21,12 @@ class LCSM
       }
     }
 
-    longest_substring = ""
+    longest_substring = ''
 
     for j in 2..raw_array.length #for the rest of the strings
       unless raw_array[j].nil?
 
         raw_array[j].delete!("\n") #strip the newlines
-
         for i in 0..all_substrings.length #then for every substring of the first string
           unless all_substrings[i].nil?
 
@@ -44,7 +43,7 @@ class LCSM
               all_substrings.delete_at(i) #the string doesn't match, so remove it
 
               if all_substrings[i].eql?(longest_substring) #if it was the longest substring, we can't use it any more
-                longest_substring = ""
+                longest_substring = ''
                 i = 0 #and we need to reset checking all the whole strings
               end
             end
@@ -55,7 +54,7 @@ class LCSM
 
       end
     end
-    puts longest_substring
+    longest_substring
 
   end
 end

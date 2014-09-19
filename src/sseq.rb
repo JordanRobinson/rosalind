@@ -21,7 +21,7 @@ class SSEQ
       end
     end
 
-    puts ret.join(" ")
+    ret.join(' ')
 
 
   end

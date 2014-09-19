@@ -30,9 +30,4 @@ class PROT
     end
   end
 
-
-
-
-
-
 end
