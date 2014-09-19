@@ -6,7 +6,7 @@ class TestRosalind < Test::Unit::TestCase
 
   def test_everything
 
-    debug = false
+    debug = true
 
     #for debug purposes, uncomment
     #print Dir.entries(Dir.pwd)
