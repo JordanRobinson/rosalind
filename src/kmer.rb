@@ -21,8 +21,8 @@ class KMER
 
     for i in 0..data_array[1].length
       #shuffle along the input, creating kmers as we go
-      unless (i + 3) > data_array[1].length or data_array[1][i+3].nil?
-        current_kmer = data_array[1][i] + data_array[1][i+1] + data_array[1][i+2] + data_array[1][i+3]
+      unless (i + 3) > data_array[1].length or data_array[1][i + 3].nil?
+        current_kmer = data_array[1][i] + data_array[1][i + 1] + data_array[1][i + 2] + data_array[1][i + 3]
         kmers << current_kmer
       end
     end
